@@ -11,7 +11,7 @@ let groups = [];
 for (let i = 0; i < parseVideos.length; i += 6) {
   let group = {
     title: "#" + (i/6 + 1),
-    items: [...parseVideos.slice(i, i + 10),  {type: "message"}]
+    items: [...parseVideos.slice(i, i + 6),  {type: "message"}]
   };
   groups.push(group);
 }
