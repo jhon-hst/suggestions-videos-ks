@@ -8,10 +8,11 @@ const parseVideos = myYoutubeVideos.map((video) => ({
 }))
 
 let groups = [];
-for (let i = 0; i < parseVideos.length; i += 6) {
+const splitNumber = 6
+for (let i = 0; i < parseVideos.length; i += splitNumber) {
   let group = {
-    title: "#" + (i/6 + 1),
-    items: [...parseVideos.slice(i, i + 6),  {type: "message"}]
+    title: "#" + (i/splitNumber + 1),
+    items: [...parseVideos.slice(i, i + splitNumber),  {type: "message"}]
   };
   groups.push(group);
 }
